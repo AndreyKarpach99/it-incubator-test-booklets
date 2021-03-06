@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+
+  <style>
+
+    /* 2 задание */
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .input {
+    width: 100%;
+    min-width: 584px;
+    height: 44px;
+    border-radius: 24px;
+    border: 1px solid #f80c1f;
+    outline: none;
+    padding: 0 40px;
+    margin-bottom: 20px;
+  }
+
+  .input:hover {
+    box-shadow: 5px 5px 5px rgba(0,0,0, .1);
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    background-color: #09ff00;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;font-size: 14px;
+    margin: 0 auto;
+    line-height: 27px;
+    height: 36px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* 2 конец задания */
+
+  </style>
+
+</head>
+<body>
+
+<!-- 1 задание -->
+  <main>
+    <div class="container">
+
+      <img src="https://www.google.by/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+      <input class="input" type="text">
+      <div class="button" id="button">
+        Поиск в Google
+      </div>
+
+    </div>
+  </main>
+<!-- 1 конец задания -->
+
+  <script>
+
+    // 3,4,5,10 задание
+
+    let input = document.querySelector('input'),
+        button = document.getElementById('button'),
+        arr = [{
+            name: 'Andrey',
+            age: 22
+          },
+          {
+            name: 'Dima',
+            age: 999
+          },
+          {
+            name: 'Ira',
+            age: 0
+          },
+          {
+            name: 'Dreamer',
+            age: 22
+          }
+        ]
+
+    button.addEventListener('click',() => {
+
+      if (input.value === 'google') {
+        return alert('Yandex круче. Но это не точно')
+      }
+
+      alert(input.value)
+      console.log('(5 Задание):', arr[0].name)
+
+      function delay3seconds() {
+        alert(input.value)
+      }
+
+      setTimeout(delay3seconds, 3000);
+
+    })
+
+    // 3,4,5,10 конец задания
+
+    // 6 задание
+
+    function superSum(a, b) {
+      return alert(a + b)
+    }
+
+    // 6 конец задания
+
+    // 7 задание
+
+    let array = [3,5,4,8,9,6,2,1,7],
+      min = array[0],
+      max = array[0];
+
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] < min) {
+        min = array[i]
+      }
+
+      if(array[i] > max) {
+        max = array[i]
+      }
+    } 
+
+    console.log(`(Задание 7): В массиве ${array} : минимальное число массива = ${min}, а максимальное = ${max}`)
+
+    // 7 конец задания
+
+    // 8 задание
+
+    let a = '123',
+      b = '456';
+
+    [a, b] = [b, a]
+
+    console.log(`(Задание 8): a = ${a} | b = ${b}`)
+
+    // 8 конец задания
+
+    // 9 задание
+
+    function findMax(arr) {
+      if(arr instanceof Array) {
+        
+        let max = arr[0]
+
+        for(let i = 0; i < arr.length; i++) {
+          if (arr[i] > max) {
+            max = arr[i]
+          }
+        }
+
+        console.log(max)
+
+      } else {
+        console.log('Это не массив, меня не проведешь')
+      }
+    }
+
+    // 9 конец задания
+
+  </script>
+</body>
+</html>
